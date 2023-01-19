@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Page Component testing should match with snapshot of welcome module 1`] = `
+<div
+  className="flex justify-center h-[82vh] w-screen border border-black bg-slate-700"
+>
+  <div
+    className="block w-[600px] h-[20vh] border border-black bg-red-500"
+  >
+    <h4
+      className="text-center"
+    >
+      <i>
+        OMG!
+      </i>
+      <br />
+      <i>
+        DEALS
+      </i>
+      <br />
+      JAW-DROPPING price
+    </h4>
+    <div
+      className="carousel slide"
+      onKeyDown={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="carousel-indicators"
+      >
+        <button
+          aria-current={true}
+          aria-label="Slide 1"
+          className="active"
+          data-bs-target=""
+          onClick={[Function]}
+          type="button"
+        />
+        <button
+          aria-current={false}
+          aria-label="Slide 2"
+          data-bs-target=""
+          onClick={[Function]}
+          type="button"
+        />
+      </div>
+      <div
+        className="carousel-inner"
+      >
+        <div
+          className="active carousel-item"
+          interval={1500}
+        >
+          <img
+            alt="Image One"
+            className="w-full h-[400px] object-cover"
+            src="/imgs/dress.png"
+          />
+          <div
+            className="carousel-caption"
+          >
+            <h3
+              className="text-red-500 font-bold  font-mono italic"
+            >
+              FUN,FASHION,SAVING AND MORE
+            </h3>
+            <p
+              className="text-red-500 font-bold italic"
+            >
+              The DRESS Store
+              <br />
+              +Explore
+            </p>
+          </div>
+        </div>
+        <div
+          className="carousel-item"
+          interval={500}
+        >
+          <img
+            alt="Image Two"
+            className="w-full h-[400px]"
+            src="/imgs/men.jpg"
+          />
+          <div
+            className="carousel-caption"
+          >
+            <h3
+              className="text-red-500 font-bold font-mono italic "
+            >
+              FUN,FASHION,SAVING AND MORE 
+            </h3>
+            <p
+              className="text-red-500 font-bold italic"
+            >
+              The DRESS Store
+              <br />
+              +Explore
+            </p>
+          </div>
+        </div>
+      </div>
+      <a
+        className="carousel-control-prev"
+        href="#"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        <span
+          aria-hidden="true"
+          className="carousel-control-prev-icon"
+        />
+        <span
+          className="visually-hidden"
+        >
+          Previous
+        </span>
+      </a>
+      <a
+        className="carousel-control-next"
+        href="#"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        <span
+          aria-hidden="true"
+          className="carousel-control-next-icon"
+        />
+        <span
+          className="visually-hidden"
+        >
+          Next
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+`;
