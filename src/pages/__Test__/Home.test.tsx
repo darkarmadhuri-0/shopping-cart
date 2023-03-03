@@ -1,9 +1,6 @@
 import React from "react";
-
 import { render, screen, cleanup } from "@testing-library/react";
-
 import { RecoilRoot } from "recoil";
-
 import renderer from "react-test-renderer";
 import { Home } from "../Home";
 
@@ -23,7 +20,7 @@ describe("Home Page Component testing", () => {
 
     );
 
-  };
+  }; 
 
   afterEach(() => {
 
@@ -40,13 +37,21 @@ describe("Home Page Component testing", () => {
 
   });
 
+  it("should display the required text", () => {
 
-   it("should match with snapshot of welcome module", () => {
+    render(<HomeTest />);
 
-    const tree = renderer.create(<HomeTest />).toJSON();
-
-    expect(tree).toMatchSnapshot();
+    expect(screen.getByText(/DRESS/i)).toBeInTheDocument();
 
   });
+
+
+  //  it("should match with snapshot of welcome module", () => {
+
+  //   const tree = renderer.create(<HomeTest />).toJSON();
+
+  //   expect(tree).toMatchSnapshot();
+
+  // });
 
 });

@@ -9,12 +9,15 @@ import { Navbar } from './components/Navbar';
 import { ShoppingCartProvider } from './context/ShoppingCartContext';
 import {RecoilRoot} from 'recoil'
 import BuyNow from './components/BuyNow';
+import { ErrorBoundary } from 'react-error-boundary';
+import ErrorHandler from './components/ErrorHandler';
 
 function App() {
 
   
   return (
     <RecoilRoot>
+      <ErrorBoundary FallbackComponent={ErrorHandler}>
     <ShoppingCartProvider>
       <Navbar/>
     
@@ -27,6 +30,7 @@ function App() {
       </Routes>
    
     </ShoppingCartProvider>
+    </ErrorBoundary>
     </RecoilRoot>
   );
 }

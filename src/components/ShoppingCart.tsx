@@ -1,16 +1,8 @@
-import { type } from "os";
-import { Offcanvas, OffcanvasHeader, Stack } from "react-bootstrap";
-import { isTemplateExpression } from "typescript";
-//import { useShoppingCart } from "../context/ShoppingCartContext";
-//import { formatCurrency } from "../utilities/formatCurrency";
+import { Button, Offcanvas, OffcanvasHeader, Stack } from "react-bootstrap";
 import { CartItem } from "./CartItem";
-import { StoreItem } from "./StoreItem";
-//import storeItems from "../data/items.json";
 import { ShoppingCartProps } from "../DataType/ShoppingCartDataType";
-import { useContext, useEffect } from "react";
+import { useContext} from "react";
 import { ShoppingCartContext } from "../context/ShoppingCartContext";
-import { items } from "../data/items";
-import { useState } from "react";
 import { useRecoilValue } from "recoil";
 import { AllProducts } from "../centralState/productsState";
 import {Link } from 'react-router-dom';
@@ -18,22 +10,20 @@ import {Link } from 'react-router-dom';
 export function ShoppingCart({ isOpen }: ShoppingCartProps){
 
     const products= useRecoilValue(AllProducts)
-  
-        
-   
-    // const {closeCart, cartItems} = useShoppingCart()
-       const {closeCart, cartItems } = useContext(ShoppingCartContext)
+    const {closeCart, cartItems } = useContext(ShoppingCartContext)
     return (
      <Offcanvas show={isOpen} onHide={closeCart} placement="end">
-        <Offcanvas.Header closeButton>
+        <Offcanvas.Header closeButton className="bg-secondary">
             <Offcanvas.Title>Cart</Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body>
-            <Stack gap={3}>
+        <Offcanvas.Body className="bg-slate-300">
+            <Stack gap={5} border-solid>
+            
                {cartItems.map(item =>(
                <CartItem key={item.id} {...item}/>
                ))}
-               <div className="ms-auto fw-bold fs-5">
+            
+               <div className="ms-auto fw-bold fs-5 text-black">
                 Total {"$ " + (
                      cartItems.reduce((total,cartItem) => {        //getting individual item from cartItem
                     const item = products.find(i =>i.id === cartItem.id) 
@@ -43,10 +33,11 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps){
                </div>
             </Stack>
         </Offcanvas.Body>
-        <OffcanvasHeader>
-            <Link to="/components/BuyNow">
-                 <button className="w-100 bg-primary">Buy Now</button> 
-            </Link>
+        <OffcanvasHeader className="bg-secondary">
+            {/* <Link to="/components/BuyNow" className="w-100 bg-primary text-center">
+                 <button >Buy Now</button> 
+            </Link> */}
+             <Button as="a" href="/components/BuyNow" className="text-black w-100 ">Buy Now</Button>
            
         </OffcanvasHeader>
      </Offcanvas>

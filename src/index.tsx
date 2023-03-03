@@ -5,6 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router } from 'react-router-dom';
+import { createMemoryHistory } from "history";
+
+const history = createMemoryHistory();
 
 
 const root = ReactDOM.createRoot(

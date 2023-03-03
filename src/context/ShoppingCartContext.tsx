@@ -16,9 +16,7 @@ export const ShoppingCartContext = createContext({} as ShoppingCartContextData);
 
 export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
   const [isOpen, setIsOpen] = useState(false);
-   const [cartItems, setCartItems] = useLocalStorage<CartItem[]>("sopping-Cart",[]);
-  // const [cartItems, setCartItems] = useState<CartItem[]>([]);
-
+  const [cartItems, setCartItems] = useLocalStorage<CartItem[]>("sopping-Cart",[]);
   const cartQuantity = cartItems.reduce(
     (quantity, item) => item.quantity + quantity,
     0

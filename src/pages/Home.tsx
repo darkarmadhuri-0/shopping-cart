@@ -9,7 +9,8 @@ export function Home() {
       {/* style={{ display: "block", width: 700, padding: 30 }} */}
       <h4 className="text-center"><i>OMG!</i><br/><i>DEALS</i><br/>JAW-DROPPING price</h4>
       <Carousel>
-        <Carousel.Item interval={1500}>
+        <Carousel.Item >
+        {/* interval={1500} */}
           <img
             className="w-full h-[400px] object-cover"
             src="/imgs/dress.png"
@@ -20,7 +21,8 @@ export function Home() {
             <p className="text-red-500 font-bold italic">The DRESS Store<br/>+Explore</p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item interval={500}>
+        <Carousel.Item >
+        {/* interval={500} */}
           <img
             className="w-full h-[400px]"
             src="/imgs/men.jpg"
